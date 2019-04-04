@@ -37,7 +37,7 @@ Output:
  vi triplet-stop.sh
 
 Question2
-(a)	scp -i 44195869.pem tutes.txt  ubuntu@ec2-13-55-28-107.ap-southeast-2.compute.amazonaws.com
+(a)	scp -i 44195869.pem tutes.txt  ubuntu@ec2-13-55-28-107.ap-southeast-2.compute.amazonaws.com:
 
 (b)	use”sort”command
 
