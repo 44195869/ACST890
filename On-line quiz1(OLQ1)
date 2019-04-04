@@ -1,0 +1,77 @@
+Name: Chan Hui 44195869
+GitHub username: 44195869
+Public repository: ACST890
+File name: On-line quiz1(OLQ1)
+
+Question1
+(a)	Use “curl”command :
+curl https://www.staff.hs-mittweida.de/~wuenschi/data/media/compbiolbook/chapter-10-shell-programming--triplet-stop.sh
+
+Output:
+#!/bin/bash
+# save as triplet-stop.sh
+# splits a sequence into triplets
+x=0
+while [ -n "${1:$x:3}" ]; do
+  seq=$seq${1:$x:3}" "
+  x=$(expr $x + 3)
+  if [ ${1:$x:3} == taa ] || [ ${1:$x:3} == tga ]; then
+    break
+  fi
+done
+echo "$seq"
+
+curl https://www.staff.hs-mittweida.de/~wuenschi/data/media/compbiolbook/chapter-10-shell-programming--triplet-stop.sh > triplet-stop.sh
+
+chmod u+x triplet-stop.sh
+ vi triplet-stop.sh
+Output:
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100   236  100   236    0     0     92      0  0:00:02  0:00:02 --:--:--    92
+
+(b) chmod u+x triplet-stop.sh
+ vi triplet-stop.sh
+
+Question2
+(a)	scp -i 44195869.pem tutes.txt  ubuntu@ec2-13-55-28-107.ap-southeast-2.compute.amazonaws.com
+
+(b)	use”sort”command
+
+sort tutes.txt | uniq
+the output:
+[Tutorial_1|FRI|01:00PM|C13]
+[Tutorial_1|FRI|01:00PM|C14]
+[Tutorial_1|FRI|02:00PM|C15]
+[Tutorial_1|FRI|02:00PM|C16]
+[Tutorial_1|FRI|03:00PM|C17]
+[Tutorial_1|FRI|03:00PM|C18]
+[Tutorial_1|FRI|06:00PM|C19]
+[Tutorial_1|FRI|06:00PM|C20]
+[Tutorial_1|MON|01:00PM|C03]
+[Tutorial_1|MON|01:00PM|C04]
+[Tutorial_1|MON|06:00PM|C01]
+[Tutorial_1|MON|11:00AM|C05]
+[Tutorial_1|MON|11:00AM|C06]
+[Tutorial_1|TUE|02:00PM|C01]
+[Tutorial_1|TUE|03:00PM|C07]
+[Tutorial_1|TUE|03:00PM|C08]
+[Tutorial_1|TUE|04:00PM|C06]
+[Tutorial_1|TUE|04:00PM|C09]
+[Tutorial_1|TUE|04:00PM|C10]
+[Tutorial_1|TUE|05:00PM|C11]
+[Tutorial_1|TUE|05:00PM|C12]
+[Tutorial_1|WED|04:00PM|C13]
+[Tutorial_1|WED|04:00PM|C14]
+[Tutorial_1|WED|05:00PM|C15]
+[Tutorial_1|WED|10:00AM|C09]
+[Tutorial_1|WED|10:00AM|C10]
+
+Question3
+(a)	Use: egrep ’ˆ[ˆ ]+ [ˆ ]+ [ˆ ]+$’ file.txt
+(b)	Depending on your system use: egrep -e ’-[0-9]+’ file.txt or egrep -e ’\-[0-9]+’ file.txt Note the use of the ‘-e’ switch. Without it, egrep interprets the leading minus character in the regular expression as a switch indicator
+
+(c)
+(d) Use: egrep ‘ hydrogenase’ file.txt
+
+curl https://www.staff.hs-mittweida.de/~wuenschi/data/media/compbiolbook/chapter-10-shell-programming--triplet-stop.sh > triplet-stop.sh
